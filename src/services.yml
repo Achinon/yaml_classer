@@ -1,0 +1,3 @@
+services:
+  Achinon\YamlClasserBundle\Command\YamlClasserInitiateCommand:
+    tags: ['console.command']

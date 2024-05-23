@@ -1,9 +1,8 @@
 {
   "name": "achinon/yaml_classer",
   "description": "Transforms YAML files into callable classes for easy reference inside of your IDE.",
-  "type": "library",
+  "type": "symfony-bundle",
   "license": "MIT",
-  "minimum-stability": "stable",
   "authors": [
     {
       "name": "Emil Gutkiewicz",
@@ -12,11 +11,13 @@
   ],
   "require": {
     "achinon/toolset": "^1.0",
-    "symfony/yaml": "^7.0"
+    "symfony/yaml": "^7.0",
+    "symfony/framework-bundle": "^7.0",
+    "symfony/console": "^7.0"
   },
   "autoload": {
     "psr-4": {
-      "Achinon\\YamlClasser\\": "src/"
+      "Achinon\\YamlClasserBundle\\": "src/"
     }
   }
 }
