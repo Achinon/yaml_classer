@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "achinon/toolset",
-            "version": "v1.0.1",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Achinon/toolset.git",
-                "reference": "fd16c852a18a57fdd88d578f030e7a2399199a18"
+                "reference": "132558877bca49f6f84c7d7ac4fade810bde33df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Achinon/toolset/zipball/fd16c852a18a57fdd88d578f030e7a2399199a18",
-                "reference": "fd16c852a18a57fdd88d578f030e7a2399199a18",
+                "url": "https://api.github.com/repos/Achinon/toolset/zipball/132558877bca49f6f84c7d7ac4fade810bde33df",
+                "reference": "132558877bca49f6f84c7d7ac4fade810bde33df",
                 "shasum": ""
             },
             "require": {
@@ -43,9 +43,9 @@
             "description": "A toolset I use for most of the projects I work on.",
             "support": {
                 "issues": "https://github.com/Achinon/toolset/issues",
-                "source": "https://github.com/Achinon/toolset/tree/v1.0.1"
+                "source": "https://github.com/Achinon/toolset/tree/v1.0.4"
             },
-            "time": "2024-05-22T23:24:08+00:00"
+            "time": "2024-05-23T14:45:37+00:00"
         },
         {
             "name": "psr/cache",
