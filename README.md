@@ -15,6 +15,7 @@ Now you can use Dependency Injection to access your config, or just create a new
 
 ![Usage example](https://drive.usercontent.google.com/download?id=1IoBl50Z1yI00bRqXhKCvoZxbDVZstBt2&export=view)
 
+YAML file imported in example above:
 ```yaml
 example: 1
 example2: 'example'
@@ -22,5 +23,7 @@ example3:
   example4: 'hey'
   example5: 'hi'
   example6:
-    example7: 'hello'
+    example7: 
+      - 'hello'
+      - 'sadnioaseinko'
   example8: "https://github.com/Achinon/yaml_classer/"```
