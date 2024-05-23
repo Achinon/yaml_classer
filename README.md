@@ -26,4 +26,5 @@ example3:
     example7: 
       - 'hello'
       - 'sadnioaseinko'
-  example8: "https://github.com/Achinon/yaml_classer/"```
+  example8: "https://github.com/Achinon/yaml_classer/"
+```
