@@ -182,7 +182,6 @@ class YamlClasserInitiateCommand extends Command
     {
         $classData = [];
         $subTreeCode = [];
-        $first = true;
         foreach($a as $b => $c) {
             if(!in_array(gettype($c), ['array', 'object'])) {
                 if(is_numeric($b)) {
@@ -194,13 +193,10 @@ class YamlClasserInitiateCommand extends Command
                 );
                 continue;
             }
-            $subTreeClassPath = $classPath;
-            if($first){
-                do {
-                    $subTreeClassPath = \Achinon\ToolSet\Generator::randomAlphanumericString();
-                } while (ctype_digit($subTreeClassPath[0]));
-                $first = false;
-            }
+
+            do {
+                $subTreeClassPath = \Achinon\ToolSet\Generator::randomAlphanumericString();
+            } while (ctype_digit($subTreeClassPath[0]));
 
             $subTreeCode[$subTreeClassPath] = static::createTree($c, $subTreeClassPath);
 
