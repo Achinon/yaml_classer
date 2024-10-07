@@ -10,6 +10,7 @@
     }
   ],
   "require": {
+    "php": "^8.2",
     "achinon/toolset": "^1.0",
     "symfony/yaml": "^7.0",
     "symfony/framework-bundle": "^7.0",
