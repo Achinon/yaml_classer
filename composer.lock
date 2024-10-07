@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4954b33b6e366af6f43bc784e5b9f156",
+    "content-hash": "7e5df6e0ea6d838a9f7b7b7806c56531",
     "packages": [
         {
             "name": "achinon/toolset",
-            "version": "v1.0.7",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Achinon/toolset.git",
-                "reference": "ced00e9751abd17487363da44d9dca0b077113e0"
+                "reference": "04b42266c6ec3e4b9c4980c0b8b19bc045259134"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Achinon/toolset/zipball/ced00e9751abd17487363da44d9dca0b077113e0",
-                "reference": "ced00e9751abd17487363da44d9dca0b077113e0",
+                "url": "https://api.github.com/repos/Achinon/toolset/zipball/04b42266c6ec3e4b9c4980c0b8b19bc045259134",
+                "reference": "04b42266c6ec3e4b9c4980c0b8b19bc045259134",
                 "shasum": ""
             },
             "require": {
@@ -43,9 +43,9 @@
             "description": "A toolset I use for most of the projects I work on.",
             "support": {
                 "issues": "https://github.com/Achinon/toolset/issues",
-                "source": "https://github.com/Achinon/toolset/tree/v1.0.7"
+                "source": "https://github.com/Achinon/toolset/tree/v1.0.8"
             },
-            "time": "2024-09-27T14:07:45+00:00"
+            "time": "2024-10-07T15:49:27+00:00"
         },
         {
             "name": "psr/cache",
@@ -2318,7 +2318,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^8.2"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }

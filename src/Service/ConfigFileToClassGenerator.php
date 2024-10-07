@@ -2,6 +2,7 @@
 
 namespace Achinon\YamlClasserBundle\Service;
 
+use Achinon\ToolSet\Dumper;
 use Achinon\YamlClasserBundle\PhpCode\PhpCodeBuilder;
 use Achinon\YamlClasserBundle\Util\FileHandler;
 use Error;
@@ -57,7 +58,7 @@ abstract class ConfigFileToClassGenerator
         if (!$this->didChecksumChange()) {
             return false;
         }
-
+        $this->checksumHandler->updateChecksum($this->checksumHandler::dataToChecksum($this->data), $className);
         $data = $this->getData();
         $generatedCode = PhpCodeBuilder::buildClassTree($data, $className);
         $generatedCode = PhpCodeBuilder::buildFileIntro() . PHP_EOL . $generatedCode;

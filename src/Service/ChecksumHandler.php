@@ -50,6 +50,6 @@ class ChecksumHandler
         if(!isset($this->checksumData[$generatedClassName])){
             return true;
         }
-        return $this->checksumData[$generatedClassName] === $checksum;
+        return $this->checksumData[$generatedClassName] != $checksum;
     }
 }
