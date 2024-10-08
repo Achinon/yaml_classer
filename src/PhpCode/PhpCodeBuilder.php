@@ -67,7 +67,7 @@ class PhpCodeBuilder
         return <<<INTRO
 <?php
 
-namespace {$namespace}\Autogenerator;
+namespace Achinon\YamlClasserBundle\Generated;
 
 INTRO;
 
