@@ -47,7 +47,7 @@ abstract class ConfigFileToClassGenerator
     /**
      * @throws \Exception
      */
-    public function generateConfigFile(string $className, ?string $customFilePath = null, ?string $customNameSpace = null): bool
+    public function generateConfigFile(string $className, ?string $customFilePath = null, ?string $customNameSpace = null, bool $forceUpdate = false): bool
     {
         if(is_null($customFilePath) !== is_null($customNameSpace)){
             throw new \Exception('When setting custom namespace or filepath, both must be defined.');
@@ -59,7 +59,7 @@ abstract class ConfigFileToClassGenerator
             throw new Error('Data is empty. Cannot generate config file.');
         }
 
-        if (!$this->didChecksumChange()) {
+        if (!$this->didChecksumChange() && !$forceUpdate) {
             return false;
         }
         $this->checksumHandler->updateChecksum($this->checksumHandler::dataToChecksum($this->data), $className);
