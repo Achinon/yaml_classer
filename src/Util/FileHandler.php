@@ -26,9 +26,10 @@ class FileHandler
         }
     }
 
-    public function saveClassFile(string $className, string $content): void
+    public function saveClassFile(string $className, string $content, ?string $customFilePath = null): void
     {
-        $filePath = __DIR__."/../Generated/$className.php";
+        $fileDir = $customFilePath ?? __DIR__."/../Generated";
+        $filePath = "$fileDir/$className.php";
         $this->ensureFileExists($filePath);
         $this->filesystem->dumpFile($filePath, $content);
     }

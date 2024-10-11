@@ -61,13 +61,13 @@ class PhpCodeBuilder
         return $treeClassString.' '.$codeFullPack;
     }
 
-    public static function buildFileIntro()
+    public static function buildFileIntro(?string $customNameSpace = null)
     {
-        $namespace = __NAMESPACE__;
+        $namespace = $customNameSpace ?? 'Achinon\YamlClasserBundle\Generated';
         return <<<INTRO
 <?php
 
-namespace Achinon\YamlClasserBundle\Generated;
+namespace $namespace;
 
 INTRO;
 

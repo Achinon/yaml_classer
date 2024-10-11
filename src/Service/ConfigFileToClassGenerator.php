@@ -47,8 +47,12 @@ abstract class ConfigFileToClassGenerator
     /**
      * @throws \Exception
      */
-    public function generateConfigFile(string $className): bool
+    public function generateConfigFile(string $className, ?string $customFilePath = null, ?string $customNameSpace = null): bool
     {
+        if(is_null($customFilePath) !== is_null($customNameSpace)){
+            throw new \Exception('When setting custom namespace or filepath, both must be defined.');
+        }
+
         $this->generatedClassName = $className;
 
         if (is_null($this->data)) {
@@ -61,9 +65,9 @@ abstract class ConfigFileToClassGenerator
         $this->checksumHandler->updateChecksum($this->checksumHandler::dataToChecksum($this->data), $className);
         $data = $this->getData();
         $generatedCode = PhpCodeBuilder::buildClassTree($data, $className);
-        $generatedCode = PhpCodeBuilder::buildFileIntro() . PHP_EOL . $generatedCode;
+        $generatedCode = PhpCodeBuilder::buildFileIntro($customNameSpace) . PHP_EOL . $generatedCode;
 
-        $this->fileHandler->saveClassFile($className, $generatedCode);
+        $this->fileHandler->saveClassFile($className, $generatedCode, $customFilePath);
         $this->checksumHandler->saveChecksum();
 
         return true;
